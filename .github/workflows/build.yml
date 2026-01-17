@@ -1,0 +1,37 @@
+name: Build & Test
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+        include:
+          - os: ubuntu-latest
+            install: sudo apt-get update && sudo apt-get install -y libsdl2-dev libsdl2-ttf-dev libgtk-3-dev
+          - os: macos-latest
+            install: brew install sdl2 sdl2_ttf gtk+3
+
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Install dependencies
+      run: ${{ matrix.install }}
+    
+    - name: Create build directory
+      run: mkdir -p build
+    
+    - name: Configure CMake
+      run: cd build && cmake ..
+    
+    - name: Build
+      run: cd build && make
+    
+    - name: Check executable
+      run: file build/FileOrganizer && ls -lh build/FileOrganizer
