@@ -158,4 +158,4 @@ Pour toute question ou problème, veuillez ouvrir une issue sur GitHub.
 
 ---
 
-**Développé avec ❤️ par [Junior Semassa]**
+**Développeur [Junior Semassa]**
