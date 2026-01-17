@@ -53,8 +53,8 @@ brew install cmake sdl2 sdl2_ttf gtk+3
 
 ```bash
 # 1. Cloner le dépôt
-git clone https://github.com/YOUR_USERNAME/file_organizer.git
-cd file_organizer
+git clone https://github.com/juniorsems/Organisateur-de-Fichiers-Multiplatforme.git
+cd Organisateur-de-Fichiers-Multiplatforme
 
 # 2. Créer et compiler
 mkdir build && cd build
@@ -158,5 +158,4 @@ Pour toute question ou problème, veuillez ouvrir une issue sur GitHub.
 
 ---
 
-**Développé avec ❤️ par [Votre Nom]**
-
+**Développé avec ❤️ par [Junior Semassa]**
