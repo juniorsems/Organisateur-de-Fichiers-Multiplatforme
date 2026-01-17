@@ -30,3 +30,11 @@ __pycache__/
 # OS
 Thumbs.db
 .DS_Store
+
+# Archives
+*.zip
+*.tar.gz
+*.tar.bz2
+
+# Dependencies (précompilées)
+external/nfd-src/
